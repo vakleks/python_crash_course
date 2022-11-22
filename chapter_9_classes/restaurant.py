@@ -19,18 +19,19 @@ class Restaurant:
     def set_numbers_served(self, number_served):
         """Show numver served."""
         self.number_served = number_served
-        print(f"{number_served} numbers served." )
 
     def increment_numbers_served(self, add_number):
         """Add served numbers."""
         self.number_served += add_number
+        print(f"{add_number} numbers served." )
 
 
 american_restaurant = Restaurant('Mc.Donalds', 'american', 'open')
-italian_restaurant = Restaurant('Rukkola', 'italian', 'closed')
-japanese_restaurant = Restaurant('Sushiya', 'japanese', 'open')
-
 american_restaurant.describe_restaurant()
 american_restaurant.chek_status()
-american_restaurant.set_numbers_served(6)
+american_restaurant.increment_numbers_served(5)
+
+
+
+
 
