@@ -30,10 +30,10 @@ american_restaurant.describe_restaurant()
 american_restaurant.chek_status()
 
 american_restaurant.number_served = 10
-print("Number served: " + str(american_restaurant.number_served))
+print(str(american_restaurant.number_served) + " numbers served.")
 
 american_restaurant.increment_numbers_served(4)
-print("Number served: " + str(american_restaurant.number_served))
+print(str(american_restaurant.number_served) + " numbers served after update data.")
 
 
 
