@@ -23,13 +23,18 @@ class Restaurant:
     def increment_numbers_served(self, add_number):
         """Add served numbers."""
         self.number_served += add_number
-        print(f"{add_number} numbers served." )
 
 
 american_restaurant = Restaurant('Mc.Donalds', 'american', 'open')
 american_restaurant.describe_restaurant()
 american_restaurant.chek_status()
-american_restaurant.increment_numbers_served(5)
+
+american_restaurant.number_served = 10
+print("Number served: " + str(american_restaurant.number_served))
+
+american_restaurant.increment_numbers_served(4)
+print("Number served: " + str(american_restaurant.number_served))
+
 
 
 
