@@ -29,7 +29,7 @@ class Car:
         self.odometer_reading +=miles
 
 
-class Battery:
+class Battery():
     """Create a battery for ElectricCar class."""
     def __init__(self, battery_size=75):
         self.battery_size = battery_size
