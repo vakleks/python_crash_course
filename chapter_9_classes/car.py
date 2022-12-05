@@ -1,4 +1,4 @@
-"""Class for car modeling."""
+"""A set of classes for modeling gasoline and electric cars."""
 
 class Car:
     """Modeling the car."""
@@ -29,4 +29,42 @@ class Car:
     def increment_odometer(self, miles):
         """Add data to odometer value."""
         self.odometer_reading += miles
+
+class Battery():
+    """Create a battery for ElectricCar class."""
+    def __init__(self, battery_size=75):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Output message about battery value."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def upgrade_battery(self):
+        """Charge battery to 100% capacity."""
+        if self.battery_size < 100:
+            self.battery_size = 100
+            print(f"Battery charged to {self.battery_size}-kWh.")
+
+    def get_range(self):
+        """Display a message about the distance that the car can drive according to the battery capacity"""
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+
+        print(f"This car can go about {range} miles on a full charge.")
+
+class ElectricCar(Car):
+    """Model electric car."""
+
+    def __init__(self, make, model, year):
+        """Add atributes of parent class."""
+        super().__init__(make, model, year)
+        self.battery = Battery()
+
+    def fill_gas_tank(self):
+        """Electrocar has no gas tank!"""
+        print("This car doesn't need a gas tank!")
+
+
 
