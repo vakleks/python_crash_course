@@ -1,20 +1,11 @@
 """Module fo creating admins."""
+from user_module import User
 
-class User():
-    """Create a new user."""
-
+class Admin(User):
+    """Class Admin extends class User."""
     def __init__(self, first_name, last_name):
-        """Initiate new user."""
-        self.first_name = first_name.title()
-        self.last_name = last_name.title()
-
-    def create_user(self):
-        """Add info about new user."""
-        print(f"{self.first_name} {self.last_name}")
-
-    def greet_user(self):
-        """Greeting user."""
-        print(f"Hi, {self.first_name}! \nThank you for registration, welcome)")
+        super().__init__(first_name, last_name)
+        self.privilegies = Privilegies()
 
 
 class Privilegies():
@@ -27,12 +18,3 @@ class Privilegies():
         print("Privilegies:")
         for privilegie in self.privilegies:
             print(f"* {privilegie};")
-
-
-class Admin(User):
-    """Class Admin extends class User."""
-    def __init__(self, first_name, last_name):
-        super().__init__(first_name, last_name)
-        self.privilegies = Privilegies()
-
-

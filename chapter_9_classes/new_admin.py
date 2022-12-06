@@ -1,4 +1,4 @@
-from admin_module import User, Privilegies, Admin
+from admin_module import Admin
 
 anakin_skyworker = Admin('Anakin', 'Skyworker')
 anakin_skyworker.privilegies.privilegies = ['can add post', 'can edit post', 'can delete post', 'can be a Dart Wader']
