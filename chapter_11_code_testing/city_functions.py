@@ -1,5 +1,7 @@
-def full_city_info(city, country):
+def full_city_info(city, country, population=''):
     """Create full info about the city."""
-    full_info = f"{city}, {country}"
+    if population:
+        full_info = f"{city}, {country}, population - {population}"
+    else:
+        full_info = f"{city}, {country}" 
     return full_info.title()
-
