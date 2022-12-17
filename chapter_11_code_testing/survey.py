@@ -8,7 +8,7 @@ class AnonymysSurvey:
 
     def show_question(self):
         """Show questions."""
-        print(self, question)
+        print(self.question)
 
     def store_reponse(self, new_response):
         """Save one response to question."""
