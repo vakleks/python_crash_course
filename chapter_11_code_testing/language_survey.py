@@ -1,8 +1,8 @@
-from survey import AnonymysSurvey
+from survey import AnonymousSurvey
 
 # Define the questions and create a survey.
 question = "What language did you first learn to speak?"
-my_survey = AnonymysSurvey(question)
+my_survey = AnonymousSurvey(question)
 
 # Show questions and save answers to it.
 my_survey.show_question()
