@@ -2,28 +2,32 @@ import unittest
 from survey import AnonymousSurvey
 
 class TestAnonymousSurvey(unittest.TestCase):
-    """Test for TestAnonymousSurvey class."""
+    """Tests for TestAnonymousSurvey class."""
+
+    def setUp(self):
+        """
+        Create survey and set of responses for
+        all test methods.
+        """
+        question = "What language did you first learn to speak?"
+        self.my_survey = AnonymousSurvey(question)
+        self.responses = ['English', 'Spanish', 'Mandarin']
 
     def test_single_response(self):
         """Check whether the single answer is saved correctly."""
-        question = "What language did you first learn to speak?"
-        my_survey = AnonymousSurvey(question)
-        my_survey.store_reponse('English')
-        self.assertIn('English', my_survey.responses)
+        self.my_survey.store_reponse(self.responses[0])
+        self.assertIn(self.responses[0], self.my_survey.responses)
 
     def test_store_three_responses(self):
         """
         Check if the three individual
         responses are stored correctly.
         """
-        question = "What language did you first learn to speak?"
-        my_survey = AnonymousSurvey(question)
-        responses = ['English', 'Spanish', 'Mandarin']
-        for response in responses:
-            my_survey.store_reponse(response)
+        for response in self.responses:
+            self.my_survey.store_reponse(response)
 
-        for response in responses:
-            self.assertIn(response, my_survey.responses)   
+        for response in self.responses:
+            self.assertIn(response, self.my_survey.responses)   
 
 if __name__ == '__main__':
     unittest.main()
