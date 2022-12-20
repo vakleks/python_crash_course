@@ -1,12 +1,12 @@
 class Employee():
-    """A class to represent an employee."""
+    """A class to create an employee."""
 
-    def __init__(self, f_name, l_name, salary):
+    def __init__(self, first_name,  last_name, year_salary):
         """Initialize the employee."""
-        self.first = f_name.title()
-        self.last = l_name.title()
-        self.salary = salary
+        self.first = first_name.title()
+        self.last = last_name.title()
+        self.salary = year_salary
 
-    def give_raise(self, amount=5000):
-        """Give the employee a raise."""
-        self.salary += amount
+    def give_raise(self, default_raise=5000):
+        """Raise salary to employee."""
+        self.salary += default_raise
