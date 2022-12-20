@@ -1,11 +1,12 @@
-class Employee:
-    """Modeling employee."""
+class Employee():
+    """A class to represent an employee."""
 
-    def __init__(self, name, year_salary):
-        """Initiate attributes that describe the employee."""
-        self.name = name
-        self.year_salary = year_salary
+    def __init__(self, f_name, l_name, salary):
+        """Initialize the employee."""
+        self.first = f_name.title()
+        self.last = l_name.title()
+        self.salary = salary
 
-    def give_raise(self):
-        """Add $5k to year salary, or another value of raise."""
-        self.year_salary += 5000
+    def give_raise(self, amount=5000):
+        """Give the employee a raise."""
+        self.salary += amount
