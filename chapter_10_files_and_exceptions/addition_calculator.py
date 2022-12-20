@@ -11,7 +11,6 @@ while True:
     try:
         answer = int(first_number) + int(second_number)
     except ValueError:
-        print("You can't add text to number!")
+        print("You can't add text to the number!")
     else:
         print(f"The sum is: {answer}")
-
